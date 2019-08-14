@@ -7,6 +7,6 @@
 #define V 4
 using namespace std;
 
-int travllingSalesmanProblem(int graph[][V], int s);
+int travllingSalesmanProblem(int graph[][V], int s, vector<int> &path);
 
 #endif

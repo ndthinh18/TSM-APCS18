@@ -1,12 +1,11 @@
 #include "TSM.h"
-int travllingSalesmanProblem(int graph[][V], int s) 
+int travllingSalesmanProblem(int graph[][V], int s, vector<int> &path) 
 {
     // store all vertex apart from source vertex 
 	vector<int> vertex; 
 	for (int i = 0; i < V; i++) 
 		if (i != s) 
 			vertex.push_back(i); 
-
 	// store minimum weight Hamiltonian Cycle. 
 	int min_path = INT_MAX; 
 	do { 
@@ -23,7 +22,12 @@ int travllingSalesmanProblem(int graph[][V], int s)
 		current_pathweight += graph[k][s]; 
 
 		// update minimum 
-		min_path = min(min_path, current_pathweight); 
+		//min_path = min(min_path, current_pathweight); 
+		if (min_path > current_pathweight)
+		{
+			min_path = current_pathweight;
+			path = vertex; // update to minimum path
+		}
 		
 	} while (next_permutation(vertex.begin(), vertex.end())); 
 

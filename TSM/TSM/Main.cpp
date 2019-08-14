@@ -8,7 +8,12 @@ int main()
 					{ 15, 35, 0, 30 }, 
 					{ 20, 25, 30, 0 } };
 	int s = 0; 
-	cout << travllingSalesmanProblem(graph, s) << endl; 
+	vector<int> path;
+	cout << travllingSalesmanProblem(graph, s, path) << endl;
+	cout << s + 1 <<  " -> ";
+	for (int i = 0; i < path.size(); i++)
+		cout << path[i] + 1 << " -> ";
+	cout << s + 1 << endl;
 	system("pause");
 	return 0; 
 }
