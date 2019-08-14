@@ -1,0 +1,5 @@
+﻿  Main.cpp
+  TSM.cpp
+  Generating Code...
+C:\Users\THINH\Desktop\TSM\TSM\TSM.cpp(19,21): warning C4018:  '<': signed/unsigned mismatch
+  TSM.vcxproj -> C:\Users\THINH\Desktop\TSM\Debug\TSM.exe
